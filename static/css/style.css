@@ -1,0 +1,121 @@
+:root {
+    --bg-color-body: #1c1c1e; /* Un gris oscuro y suave */
+    --bg-color-card: #2c2c2e; /* Un gris un poco más claro para contraste */
+    --text-color-light: #f2f2f7; /* Blanco casi puro para la legibilidad */
+    --text-color-muted: #9c9c9e; /* Gris suave para textos secundarios */
+    --accent-color: #0a84ff; /* Un azul limpio para botones y enlaces */
+    --link-color: #5e9efd;
+    --border-color: #4a4a4c;
+}
+
+body {
+    background-color: var(--bg-color-body);
+    color: var(--text-color-light);
+}
+
+.navbar {
+    background-color: var(--bg-color-card) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form-control, .form-select {
+    background-color: var(--bg-color-card);
+    color: var(--text-color-light);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: var(--text-color-muted);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(10, 132, 255, 0.25);
+}
+
+.card {
+    background-color: var(--bg-color-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.card-title {
+    color: var(--text-color-light);
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--text-color-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+    transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+    color: var(--text-color-light);
+    border-color: var(--border-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bg-color-hover);
+    color: var(--bg-color-body);
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+table {
+    background-color: var(--bg-color-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--bg-color-card);
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+    background-color: #38383a;
+}
+
+.idea-image-card {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.badge-status-pendiente { background-color: #6c757d; color: white; }
+.badge-status-en-progreso { background-color: #ffc107; color: black; }
+.badge-status-completada { background-color: #28a745; color: white; }
